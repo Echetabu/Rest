@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
-  constructor() { }
+  isDark: Boolean = false;
+  constructor(@Inject(DOCUMENT) private document: any, private readonly renderer : Renderer2) { }
 
   ngOnInit(): void {
+
+  }
+
+  toggleTheme() {
+    if(!this.isDark){
+      this.renderer.addClass(this.document.body, 'dark-mode')
+    }
+    
   }
 
 }
