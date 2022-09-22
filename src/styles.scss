@@ -27,6 +27,8 @@
     --light-blue: hsl(200, 15%, 8%);
     --light-input: hsl(0, 0%, 52%);
 
+    --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
 }
 
 body{
@@ -89,7 +91,7 @@ h3{
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 100%
+    height: 100%;
 
     &--4{
         grid-template-columns: repeat(4, 1fr);
