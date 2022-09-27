@@ -1,15 +1,8 @@
 <app-home-filter></app-home-filter>
-<div class="container countries grid grid--4">
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
-   <app-home-card></app-home-card>
+<div class="container countries grid grid--4" >
+   <div *ngFor="let country of countries">
+         <app-home-card [country]="country"></app-home-card>
+   </div>
+   
+   
 </div>

@@ -7,6 +7,7 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  isDark: boolean = false;
   constructor(@Inject(DOCUMENT) private document: Document, private readonly renderer : Renderer2) { }
 
   ngOnInit(): void {
@@ -14,7 +15,7 @@ export class NavComponent implements OnInit {
   }
 
   toggleTheme() {
-    this.document.body.classList.toggle('dark-mode')
+    this.isDark = this.document.body.classList.toggle('dark-mode')
     // if(this.document.body.classList.contains('dark-mode')){
     //   this.renderer.removeClass(this.document.body, 'dark-mode')
     // }else{

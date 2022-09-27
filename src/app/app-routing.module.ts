@@ -4,8 +4,8 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'detail/:id', component: DetailComponent  }
+  {path: '', loadChildren:() =>  import('./pages/home/home.module').then(m => m.HomeModule)},
+  {path: 'detail/:id', loadChildren: ()=> import('./pages/detail/detail.module').then(m => m.DetailModule)  }
 ];
 
 @NgModule({

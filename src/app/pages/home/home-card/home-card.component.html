@@ -1,9 +1,11 @@
 <div class="card">
-    <img src="https://flagcdn.com/ph.svg" alt="Country Flag" class="card__image">
+    <img [src]="country.flags.png" alt="Country Flag" class="card__image">
     <div class="card__content">
-        <h3>Nigeria</h3>
-        <p><span>Population: </span> 18,000</p>
-        <p><span>Region: </span> Africa</p>
-        <p><span>Capital: </span> Abuja</p>
+        <a [routerLink]="['detail', 3]">
+            <h3>{{ country.name.common }}</h3>
+            <p><span>Population: </span> {{country.population}}</p>
+            <p><span>Region: </span> {{country.region}}</p>
+            <p><span>Capital: </span> {{ country.capital[0] }}</p>
+        </a>
     </div>
 </div>
