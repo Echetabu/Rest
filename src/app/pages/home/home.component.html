@@ -1,4 +1,5 @@
 <app-home-filter></app-home-filter>
+<app-loading *ngIf="isLoading"></app-loading>
 <div class="container countries grid grid--4" >
    <div *ngFor="let country of countries">
          <app-home-card [country]="country"></app-home-card>

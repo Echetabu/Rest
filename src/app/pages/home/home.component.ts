@@ -8,16 +8,21 @@ import { NetworkLibService } from 'src/app/shared/network-lib.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  isLoading: boolean = false;
 
   countries : Country[] = []
 
   constructor(private readonly networkLib: NetworkLibService) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.networkLib.get<Country[]>('all').subscribe({
       next: (data) => this.countries = data,
-      error: (e) => console.log(e),
-      complete: () => console.log('I don complete o!')
+      error: (e) => {
+        console.log(e)
+        this.isLoading = false;
+      },
+      complete: () => this.isLoading = false
     })
   }
 
