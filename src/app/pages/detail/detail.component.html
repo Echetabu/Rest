@@ -11,7 +11,7 @@
             <div class="grid grid--2 inner-grid">
                 <div class="left">
                     <p>Native Name: <span>{{country?.name?.nativeName?.spa?.official}}</span></p>
-                    <p>population: <span>{{country?.population}}</span></p>
+                    <p>population: <span>{{country?.population?.toLocaleString()}}</span></p>
                     <p>Region: <span>{{country?.region}}</span></p>
                     <p>Sub Region: <span>{{country?.subregion}}</span></p>
                     <p>Capital: <span>{{country?.capital}}</span></p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="bc">
+            <div *ngIf="country?.borders" class="bc">
                 <span>Border Countries </span>
                 <ul  class="flex">
                     <li *ngFor="let i of country?.borders">

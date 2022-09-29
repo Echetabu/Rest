@@ -8,9 +8,9 @@ const routes: Routes = [
   {
     path: '', 
     component: DetailComponent,
-    // resolve: {
-    //   detail: GetDataResolver
-    // }
+    resolve: {
+      detail: GetDataResolver
+    }
   },
 ];
 
