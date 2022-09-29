@@ -1,0 +1,28 @@
+.detail{
+    margin-top: 1.5em;
+    width: 100%;
+
+    .wrap{
+        margin-top: 2.5em;
+    }
+
+    h1{
+        margin-bottom: 2em;
+    }
+
+    .inner-grid{
+        align-items: start;
+      
+        p{
+            margin-top: .5em;
+            font-weight: var(--semi-bold-weight);
+
+            &> span{
+                font-weight: var(--light-weight);
+            }
+        }
+         
+    }
+
+
+}

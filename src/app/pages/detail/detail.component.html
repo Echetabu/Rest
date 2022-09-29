@@ -1,2 +1,27 @@
-<p>detail works!</p>
-<p>{{ country | json }}</p>
+<div class="container detail">
+    <app-back-btn [text]="'Back'" (click)="goBack()"></app-back-btn>
+    <!-- <p>{{ country | json }}</p> -->
+    <div class="grid grid--2 wrap">
+        <div class="detail__flag">
+            <img [src]="country?.flags?.svg" [alt]="country?.name?.common">
+        </div>
+        <div class="detail__info">
+            <h1>{{country?.name?.common}}</h1>
+
+            <div class="grid grid--2 inner-grid">
+                <div class="left">
+                    <p>Native Name: <span>{{country?.name?.common}}</span></p>
+                    <p>population: <span>{{country?.population}}</span></p>
+                    <p>Region: <span>{{country?.region}}</span></p>
+                    <p>Sub Region: <span>{{country?.region}}</span></p>
+                    <p>Capital: <span>{{country?.capital}}</span></p>
+                </div>
+                <div class="right">
+                    <p>Native Name: <span>{{country?.name?.common}}</span></p>
+                    <p>population: <span>{{country?.population}}</span></p>
+                    <p>Region: <span>{{country?.region}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
