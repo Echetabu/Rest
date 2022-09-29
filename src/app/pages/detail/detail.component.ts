@@ -47,7 +47,7 @@ const cty =
   "subregion":"Central America",
   "languages":{
      "spa":"Spanish"
-  },
+  }, 
   "translations":{
      "ara":{
         "official":"جمهورية غواتيمالا",

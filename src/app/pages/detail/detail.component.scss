@@ -4,6 +4,7 @@
 
     .wrap{
         margin-top: 2.5em;
+        gap: 4em;
     }
 
     h1{
@@ -22,6 +23,13 @@
             }
         }
          
+    }
+
+    .bc{
+        ul{
+            display: inline-flex;
+            flex-direction: row;
+        }
     }
 
 
