@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Country } from 'src/app/shared/model/country.dao';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  country?: Country
+
+  constructor(private readonly activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRouter.data.subscribe({
+      next : (data) =>{
+        this.country = data['detail'][0]
+        console.log('------------------')
+        console.log(this.country)
+        console.log('--------SSSSSSSSSSSS----------')
+      }
+    })
   }
 
 }

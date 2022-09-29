@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 const regions = [
-  "All",
-  "Asia",
-  "Africa"
+  "All", "Africa", "Americas", "Asia", "Europe", "Oceania"
 ]
 
 @Component({

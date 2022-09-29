@@ -1,7 +1,7 @@
 <div class="card">
     <img [src]="country.flags.png" alt="Country Flag" class="card__image">
     <div class="card__content">
-        <a [routerLink]="['detail', 3]">
+        <a [routerLink]="['detail', country.name.common]">
             <h3>{{ country.name.common }}</h3>
             <p><span>Population: </span> {{country.population}}</p>
             <p><span>Region: </span> {{country.region}}</p>
