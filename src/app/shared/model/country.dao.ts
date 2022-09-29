@@ -1,5 +1,5 @@
 export type Country = {
-    name: { common: string, official: string, nativeName: {spa: {official: string}}}
+    name: { common: string, official: string, nativeName: any}
     tld: string[],
     capital : string[],
     region: string,
@@ -8,5 +8,5 @@ export type Country = {
     currencies: any,
     flags : { png: string, svg: string }
     borders: string[]
-    languages: {spa: string}
+    languages: any
 };

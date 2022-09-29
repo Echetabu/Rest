@@ -4,6 +4,8 @@ import { DetailComponent } from './detail.component';
 import { DetailRoutingModule } from './detail-routing.module';
 import { BackBtnComponent } from './back-btn/back-btn.component';
 import { DetailPipe } from './detail.pipe';
+import { LangPipe } from './lang.pipe';
+import { NativeNamePipe } from './native-name.pipe';
 
 
 
@@ -11,7 +13,9 @@ import { DetailPipe } from './detail.pipe';
   declarations: [
     DetailComponent,
     BackBtnComponent,
-    DetailPipe
+    DetailPipe,
+    LangPipe,
+    NativeNamePipe
   ],
   imports: [
     CommonModule,
