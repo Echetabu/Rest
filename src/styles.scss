@@ -108,3 +108,13 @@ h3{
     align-items: center;
     height: 100%
 }
+
+.btn{
+    padding: .4em 1.2em;
+    box-shadow: var(--shadow);
+    display: inline-block;
+    border-radius: .3em;
+    background-color: var(--surface-color);
+    cursor: pointer;
+    font-size: .8rem;
+}

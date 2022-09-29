@@ -18,7 +18,7 @@
                 </div>
                 <div class="right">
                     <p>Top Level Domain: <span>{{country?.tld}}</span></p>
-                    <p>Currencies: <span>{{country?.currencies | json}}</span></p>
+                    <p>Currencies: <span>{{ country?.currencies | detail }}</span></p>
                     <p>Languages: <span>{{country?.languages?.spa}}</span></p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <span>Border Countries </span>
                 <ul  class="flex">
                     <li *ngFor="let i of country?.borders">
-                        <a href="#">{{i}}</a>
+                        <a class="btn" href="#">{{i}}</a>
                     </li>
                 </ul>
             </div>
