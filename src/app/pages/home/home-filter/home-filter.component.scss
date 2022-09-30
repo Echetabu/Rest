@@ -76,4 +76,21 @@
     .show{
         display: block;
     }
+
+    @media(max-width: 800px){
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &__left{
+            width: 100%;
+            .search{
+                width: 100%;
+            }
+        }
+
+        &__right{
+            margin-top: 2em;
+        }
+    }
 }

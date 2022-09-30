@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 const regions = [
   "All", "Africa", "Americas", "Asia", "Europe", "Oceania"
@@ -12,6 +12,7 @@ const regions = [
 export class HomeFilterComponent implements OnInit {
   isOpen: Boolean = false;
   selectedText: string = "Filter by Region";
+  @Output() filterByRegion : EventEmitter<string> = new EventEmitter();
   
   regions: string[] = regions;
 
@@ -27,6 +28,7 @@ export class HomeFilterComponent implements OnInit {
   setSelected(region: string){
     this.isOpen = false;
     this.selectedText = region;
+    this.filterByRegion.emit(region);
   }
 
 }

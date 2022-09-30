@@ -1,4 +1,4 @@
-<app-home-filter></app-home-filter>
+<app-home-filter (filterByRegion)="filterByRegion($event)"></app-home-filter>
 <app-loading *ngIf="isLoading"></app-loading>
 <div class="container countries grid grid--4" >
    <div *ngFor="let country of countries">

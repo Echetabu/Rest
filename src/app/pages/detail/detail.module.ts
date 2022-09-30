@@ -6,6 +6,7 @@ import { BackBtnComponent } from './back-btn/back-btn.component';
 import { DetailPipe } from './detail.pipe';
 import { LangPipe } from './lang.pipe';
 import { NativeNamePipe } from './native-name.pipe';
+import { FormatNumberPipe } from './format-number.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { NativeNamePipe } from './native-name.pipe';
     BackBtnComponent,
     DetailPipe,
     LangPipe,
-    NativeNamePipe
+    NativeNamePipe,
+    FormatNumberPipe
   ],
   imports: [
     CommonModule,

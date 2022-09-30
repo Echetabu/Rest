@@ -9,21 +9,33 @@ import { NetworkLibService } from 'src/app/shared/network-lib.service';
 })
 export class HomeComponent implements OnInit {
   isLoading: boolean = false;
-
-  countries : Country[] = []
+  private countriesInfo : Country[] = [];
+  countries : Country[] = [];
 
   constructor(private readonly networkLib: NetworkLibService) { }
 
   ngOnInit(): void {
     this.isLoading = true;
     this.networkLib.get<Country[]>('all').subscribe({
-      next: (data) => this.countries = data,
+      next: (data) => {
+        this.countriesInfo = data;
+        this.countries = data
+      },
       error: (e) => {
         console.log(e)
         this.isLoading = false;
       },
       complete: () => this.isLoading = false
     })
+  }
+
+  filterByRegion(region: string) {
+    if(region === 'All'){
+      this.countries = [ ...this.countriesInfo ];
+    }else{
+      const selectedRegion = this.countriesInfo.filter(country => country.region === region);
+      this.countries = [...selectedRegion];
+    }
   }
 
 }
