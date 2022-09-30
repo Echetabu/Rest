@@ -8,5 +8,6 @@ export type Country = {
     currencies: any,
     flags : { png: string, svg: string }
     borders: string[]
-    languages: any
+    languages: any,
+    cca2: string
 };

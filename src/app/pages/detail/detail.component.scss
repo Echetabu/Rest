@@ -31,9 +31,15 @@
         ul{
             display: inline-flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
         li{
             margin-left: 1em;
+            margin-top: 1em;
+            // @media(max-width: 800px){
+            //     margin-top: 1em;
+            // }
         }
         span{
             font-weight: var(--semi-bold-weight);

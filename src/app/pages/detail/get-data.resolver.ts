@@ -228,6 +228,6 @@ export class GetDataResolver implements Resolve<Country[]> {
     const countryName = route.params['id']
 
     //return of(country).pipe(delay(9000));
-    return this.networkLib.get<Country[]>(`name/${countryName}`)
+    return this.networkLib.get<Country[]>(`alpha/${countryName}`)
   }
 }

@@ -27,7 +27,7 @@
                 <span>Border Countries </span>
                 <ul  class="flex">
                     <li *ngFor="let i of country?.borders">
-                        <a class="btn" href="#">{{i}}</a>
+                        <a class="btn" [routerLink]="['../../detail', i]">{{i}}</a>
                     </li>
                 </ul>
             </div>
