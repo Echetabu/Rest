@@ -11,8 +11,10 @@ const regions = [
 })
 export class HomeFilterComponent implements OnInit {
   isOpen: Boolean = false;
+  searchQuery: String = "";
   selectedText: string = "Filter by Region";
   @Output() filterByRegion : EventEmitter<string> = new EventEmitter();
+  @Output() filterByUserSearch : EventEmitter<string> = new EventEmitter();
   
   regions: string[] = regions;
 
@@ -29,6 +31,10 @@ export class HomeFilterComponent implements OnInit {
     this.isOpen = false;
     this.selectedText = region;
     this.filterByRegion.emit(region);
+  }
+
+  filterBySearch(data: string){
+    this.filterByUserSearch.emit(data)
   }
 
 }

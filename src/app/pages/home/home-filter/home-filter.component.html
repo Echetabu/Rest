@@ -2,7 +2,7 @@
     <div class="filter__left">
         <div class="search">
             <i class='bx bx-search'></i>
-            <input type="text" placeholder="Search for a country ...">
+            <input (ngModelChange)="filterBySearch($event)" [(ngModel)]="searchQuery" type="text" placeholder="Search for a country ...">
         </div>
     </div>
     <div class="filter__right">
