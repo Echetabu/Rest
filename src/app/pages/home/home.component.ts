@@ -38,4 +38,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  filterBySearch(query: string) {
+    const matches = this.countriesInfo.filter(country => country.name.common.indexOf(query) > -1);
+    this.countries = [...matches];
+  }
+
 }
