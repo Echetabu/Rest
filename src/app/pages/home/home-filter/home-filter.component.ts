@@ -34,6 +34,7 @@ export class HomeFilterComponent implements OnInit {
   }
 
   filterBySearch(data: string){
+    this.selectedText = "Filter by Region";
     this.filterByUserSearch.emit(data)
   }
 
